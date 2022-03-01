@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" ng-app="ForumApp">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="Public/css/bootstrap.min.css">
     <link rel="stylesheet" href="Public/css/forum.css">
 
     <script src="Public/js/bootstrap.min.js"></script>
     <script src="Public/js/angular.min.js"></script>
+    <script src="Public/js/angular-route.min.js"></script>
+    <script src="Public/js/angular-animate.min.js"></script>
+    <script src="Public/js/sha1.js"></script>
     <script src="Public/js/app.js"></script>
     <script src="Model/dbFactory.js"></script>
 
+    <!-- controllers -->
+    <script src="Controller/mainCtrl.js"></script>
+    <script src="Controller/userCtrl.js"></script>
+    <script src="Controller/themesCtrl.js"></script>
+    <script src="Controller/forumsCtrl.js"></script>
+    <script src="Controller/commentsCtrl.js"></script>
 </head>
 
 <body>
+    <h1>{{title}}</h1>
+    <hr>
 
+    <main ng-view>
+
+    </main>
+
+    <footer>
+        {{company}} - {{author}}
+    </footer>
 </body>
 
 </html>
