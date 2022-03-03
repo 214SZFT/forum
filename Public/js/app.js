@@ -12,4 +12,8 @@ app.config(function($routeProvider) {
             templateUrl: 'View/main.html',
             controller: 'mainCtrl',
         })
+        .when('/forums', {
+            templateUrl: 'View/forums.html',
+            controller: 'forumsCtrl',
+        })
 });
