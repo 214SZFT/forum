@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
             controller: 'mainCtrl',
         })
         .when('/passmod', {
-            templateUrl: 'View/passmod.html',
+            templateUrl: 'View/users/passmod.html',
             controller: 'passmodCtrl',
         })
 });
