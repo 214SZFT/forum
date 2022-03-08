@@ -35,6 +35,7 @@ app.factory('dbFactory', function($http, $q) {
 
         // INSERT ONE RECORD
         insert: function(tablename, values) {
+            console.log(values);
             let deferred = $q.defer();
             let data = {
                 table: tablename,
