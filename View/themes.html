@@ -3,6 +3,7 @@
 <table class="table">
     <thead>
         <tr>
+            <td>ID</td>
             <td>Témák</td>
             <td>Módosítás</td>
             
@@ -10,8 +11,9 @@
     </thead>
     <tbody>
         <tr ng-repeat="tema in temak">
-            <td>{{tema}}</td>
-            <td></a></td>
+            <td>{{tema.id}}</td>
+            <td><input type="text" ng-modell="temanev" value="{{tema.nev}}"></td>
+            <td><button ng-click=modosit()>Módósítás</button></td>
         </tr>
     </tbody>
 </table>
