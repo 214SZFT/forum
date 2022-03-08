@@ -1,0 +1,18 @@
+<h3>Login</h3>
+<div ng-controller="loginCtrl">
+    <div ng-if="loggedIn==0">
+        <div class="form-floating mb-3">
+            <input type="text" ng-model="nev" class="form-control mb-3" id="" placeholder="Név...">
+            <label for="floatingInput">Név </label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control mb-3" ng-model="jelszo" id="" placeholder="Jelszó...">
+            <label for="floatingPassword">Jelszó </label>
+        </div>
+        <button class="btn btn-primary mb-3" ng-click="login()">Bejelentkezés</button>
+    </div>
+    <div ng-if="loggedIn==1">
+        <input type="text"  class="form-control mb-3" ng-model="userName" id="" disabled>
+        <button class="btn btn-primary mb-3" ng-click="logout()">Kijelentkezés</button>
+    </div>
+</div>

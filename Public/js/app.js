@@ -12,4 +12,16 @@ app.config(function($routeProvider) {
             templateUrl: 'View/main.html',
             controller: 'mainCtrl',
         })
+        .when('/registraion', {
+            templateUrl: 'View/users/registration.html',
+            controller: 'regCtrl',
+        })
+        .when('/login', {
+            templateUrl: 'View/users/login.html',
+            controller: 'loginCtrl',
+        })
+        .when('/logout', {
+            templateUrl: 'View/users/logout.html',
+            controller: 'logoutCtrl',
+        })
 });
