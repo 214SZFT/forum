@@ -1,5 +1,9 @@
 <h3>Téma felvétel/módosítás</h3>
-<div></div>
+<div ng-controller="themesCtrl">
+    <input type="text" placeholder="Téma címe..." ng-model="temacim"><br>
+    <textarea name="A téma kifejtése" cols="30" rows="10" class="mt-2"></textarea>
+    <button ng-click="temafelv()">Téma felvétele</button>
+</div>
 <table class="table">
     <thead>
         <tr>

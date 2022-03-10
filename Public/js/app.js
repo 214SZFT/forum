@@ -12,4 +12,8 @@ app.config(function($routeProvider) {
             templateUrl: 'View/main.html',
             controller: 'mainCtrl',
         })
+        .when('/themes', {
+            templateUrl: 'View/themes.html',
+            controller: 'themesCtrl',
+        })
 });
