@@ -3,7 +3,7 @@
     <input type="text" placeholder="Téma címe..." ng-model="temacim"><br>
     <textarea name="A téma kifejtése" cols="30" rows="10" class="mt-2"></textarea>
     <button ng-click="temafelv()">Téma felvétele</button>
-</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -16,8 +16,9 @@
     <tbody>
         <tr ng-repeat="tema in temak">
             <td>{{tema.id}}</td>
-            <td><input type="text" ng-modell="temanev" value="{{tema.nev}}"></td>
-            <td><button ng-click=modosit()>Módósítás</button></td>
+            <td><input type="text" ng-model="temak[$index].nev" ></td>
+            <td><button ng-click="modosit(temak[$index].id,temak[$index].nev)">Módósítás</button></td>
         </tr>
     </tbody>
 </table>
+</div>
