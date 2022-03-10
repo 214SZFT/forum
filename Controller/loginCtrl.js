@@ -7,10 +7,19 @@ app.controller('loginCtrl',function ($scope,dbFactory) {
         console.log("jelszo: "+$scope.user.password);
         if ($scope.user.name==null || $scope.user.password==null) {
             
-            alert("Hibás név vagy jelszó!");
+            alert("Hiányzó név vagy jelszó!");
 
         } else {
-            dbFactory.select('felhasznalok','nev="${user.name}" AND jelszo='+CryptojS.SHA1("${user.password})" ')
+            
+            dbFactory.select('felhasznalok','nev="'+$scope.user.name+'" AND jelszo="'+CryptojS.SHA1($scope.user.password)+'"')
+            .then(function (response) {
+                $scope.user=response;
+                if ($scope.user.length==0) {
+                    alert("Hibás belépési adatok!");
+                } else {
+                    alert("Belépett");
+                }
+            })
         }
     }
 })
