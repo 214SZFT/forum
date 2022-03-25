@@ -1,0 +1,17 @@
+<div class="user-form">
+    <select name="" id="jog" class="form-select" ng-model="tema_nev">
+        <option ng-repeat="tema in temak" value="{{tema.id}}">{{tema.nev}}</option>
+    </select>
+    <div class="form-floating mt-3">
+        <input type="text" class="form-control" id="kcal" placeholder="null" min="1" ng-model="nev" />
+        <label for="login-email">Nev</label>
+    </div>
+    <div class="form-floating mt-3 mb-3">
+        <input type="text" class="form-control" id="feherje" placeholder="null" min="1" ng-model="leiras" />
+        <label for="login-email">Leírás</label>
+    </div>
+    <button type="button" class="btn btn-success" ng-if="!isUpdate" ng-click="newRecord()">Létrehozás</button>
+    <button type="button" class="btn btn-warning" ng-if="isUpdate" onclick="edit()">Módosítás</button>
+    <button type="button" class="btn btn-danger" ng-if="isUpdate" onclick="delete_data()">Törlés</button>
+    <button type="button" class="btn btn-secondary" ng-if="isUpdate" onclick="back()">Vissza</button>
+</div>

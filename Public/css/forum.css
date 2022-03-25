@@ -1,0 +1,13 @@
+body {
+    background-color: #433633;
+    color: #DECBB7;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
