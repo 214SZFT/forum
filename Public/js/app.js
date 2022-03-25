@@ -4,6 +4,7 @@ app.run(function($rootScope, dbFactory) {
     $rootScope.title = 'Fórum App';
     $rootScope.company = 'Bajai SZC Türr István Technikum';
     $rootScope.author = '2/14.SZFT';
+    $rootScope.userMail="";
 });
 
 app.config(function($routeProvider) {
