@@ -12,6 +12,14 @@ app.config(function($routeProvider) {
             templateUrl: 'View/main.html',
             controller: 'mainCtrl',
         })
+        .when('/themes', {
+            templateUrl: 'View/themes.html',
+            controller: 'themesCtrl',
+})
+        .when('/forums', {
+            templateUrl: 'View/forums.html',
+            controller: 'forumsCtrl',
+       })
         .when('/passmod', {
             templateUrl: 'View/users/passmod.html',
             controller: 'passmodCtrl',
