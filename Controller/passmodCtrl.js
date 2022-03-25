@@ -8,7 +8,7 @@ app.controller('passmodCtrl',function($rootScope,$scope,dbFactory){
             {
                 if ($scope.newpass1 != $scope.newpass2)
                 {
-                    alert("A megadott új jleszavak nem egyeznek!");
+                    alert("A megadott új jeleszavak nem egyeznek!");
                 }
                 else
                 {
@@ -35,7 +35,7 @@ app.controller('passmodCtrl',function($rootScope,$scope,dbFactory){
                                 {
                                     $http({
                                         method: 'POST',
-                                        url: './API/updateRecord.php',
+                                        url: '../Backend/updateRecord.php',
                                         data: {
                                             "id":response.data.ID,
                                             "table":"users",
